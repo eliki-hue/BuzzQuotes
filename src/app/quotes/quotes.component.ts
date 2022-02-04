@@ -1,4 +1,6 @@
+import { Quote } from './../quote';
 import { Component, OnInit } from '@angular/core';
+import { MaxLengthValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-quotes',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesComponent implements OnInit {
   
-  
+  quote : Quote[] =[
+    new Quote(1,'Every market has a mad man','Wahenga','Elijah',new Date(2,2,2012) )
+  ]
 
   constructor() { }
 

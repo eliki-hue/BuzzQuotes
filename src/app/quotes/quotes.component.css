@@ -5,6 +5,9 @@
     color: white;
     margin: 20px;
     padding: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-box-shadow: -9px -10px 5px 0px rgba(28,22,28,0.52);
     -moz-box-shadow: -9px -10px 5px 0px rgba(28,22,28,0.52);
     box-shadow: -9px -10px 5px 0px rgba(28,22,28,0.52);

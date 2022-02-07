@@ -17,7 +17,7 @@ export class QuotesComponent implements OnInit {
     new Quote(2,'Buy Cookies','I have to buy cookies for the parrot','NNJ',new Date(2019,6,9)),
     new Quote(3,'Get new Phone Case','Diana has her birthday coming up soon','HHG',new Date(2022,1,12)),
     new Quote(4,'Get Dog Food','Pupper likes expensive snacks','DGFGF',new Date(2019,0,18)),
-    new Quote(5,'Solve math homework','Damn Math','FHG',new Date(2019,2,14)),
+    new Quote(5,'Solve math homework fggyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy ccchhchchchchchcccccc cccccccccccccccccccccccccdcdfge dddddddddfssssddddddddddddddddddddddddddddd ddddddddddddddddddddddddddddddd','Damn Math','FHG',new Date(2019,2,14)),
     new Quote(6,'Plot my world domination plan','Cause I am an evil overlord','GFGHJK',new Date(2030,3,14)),
 
   ]

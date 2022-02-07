@@ -1,61 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="booking" class="section">
-		<div class="section-center">
-			<div class="container">
-				<div class="row">
-					<div class="booking-form">
-						<div class="booking-bg"></div>
-						<form>
-							<div class="form-header">
-								<h2>ADD A Quote</h2>
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<span class="form-label">Quote</span>
-										<input class="form-control"  required>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<span class="form-label">Sender</span>
-										<input class="form-control"  required>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<span class="form-label">Children</span>
-											<select class="form-control">
-												<option>0</option>
-												<option>1</option>
-												<option>2</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-								</div>
-							<div class="form-group">
-								<span class="form-label">Email</span>
-								<input class="form-control" type="email" placeholder="Enter your email">
-							</div>
-							<div class="form-group">
-								<span class="form-label">Phone</span>
-								<input class="form-control" type="tel" placeholder="Enter your phone number">
-							</div>
-							<div class="form-btn">
-								<button class="submit-btn">Book Now</button>
-							</div>
-                        </div>
-					
-				
-		
-		
-	
+<form (ngSubmit)="submitGoal()" #goalForm='ngForm'>
+    <div class="form-group">
 
+        <label for="name">Name</label>
+        <input type="text" required class="form-control" id="name" [(ngModel)]='newGoal.name' name="name" #name='ngModel' required>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <p>Name is Required</p>
+        </div>
+       
+
+    </div>
+    <div class="form-group">
+
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" rows="4" [(ngModel)]="newGoal.description" name="description" #description='ngModel' required></textarea>
+        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+            <p>Description is Required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="complete">Completion Date</label>
+        <input type='date' id="complete" [(ngModel)]="newGoal.completeDate" #completeDate ='ngModel' required>
+        <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+            <p> Completion date is required</p>
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-success">Add Goal</button>
+</form>

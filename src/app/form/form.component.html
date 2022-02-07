@@ -1,29 +1,37 @@
-<form (ngSubmit)="submitGoal()" #goalForm='ngForm'>
+<form (ngSubmit)="submitQuote()" #goalForm='ngForm'>
     <div class="form-group">
 
-        <label for="name">Name</label>
-        <input type="text" required class="form-control" id="name" [(ngModel)]='newGoal.name' name="name" #name='ngModel' required>
+        <label for="name">Quote</label>
+        <input type="text" required class="form-control" id="name" [(ngModel)]='newQuote.quote' name="name" #name='ngModel' required>
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-            <p>Name is Required</p>
+            <p>The Quote is Required</p>
         </div>
        
 
     </div>
     <div class="form-group">
 
-        <label for="description">Description</label>
-        <textarea class="form-control" id="description" rows="4" [(ngModel)]="newGoal.description" name="description" #description='ngModel' required></textarea>
+        <label for="description">Author</label>
+        <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.author" name="description" #description='ngModel' required></textarea>
         <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-            <p>Description is Required</p>
+            <p>The name of the Author is Required</p>
         </div>
     </div>
     <div class="form-group">
-        <label for="complete">Completion Date</label>
-        <input type='date' id="complete" [(ngModel)]="newGoal.completeDate" #completeDate ='ngModel' required>
+
+        <label for="description">Sender</label>
+        <textarea class="form-control" id="description" rows="4" [(ngModel)]="newGoal.Sender" name="description" #description='ngModel' required></textarea>
+        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+            <p>Please put your name</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="complete">Date</label>
+        <input type='date' id="complete" [(ngModel)]="newGoal.date" #completeDate ='ngModel' required>
         <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-            <p> Completion date is required</p>
+            <p> Date is required</p>
         </div>
 
     </div>
-    <button type="submit" class="btn btn-success">Add Goal</button>
+    <button type="submit" class="btn btn-success">Add Quote</button>
 </form>

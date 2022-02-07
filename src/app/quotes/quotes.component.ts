@@ -20,7 +20,13 @@ export class QuotesComponent implements OnInit {
     new Quote(5,'Solve math homework fggyyyyyyyyyy yyyyyyyyyyyyyyyyyyyy ccchhchch chchchcccccc cccccccccccccc cccccccccccdcdfge dddddddddfssssdddd ddddddddddd dddddddddddddd dddddddddd ddddddd dddddddddddddd','Damn Math','FHG',new Date(2019,2,14)),
     new Quote(6,'Plot my world domination plan','Cause I am an evil overlord','GFGHJK',new Date(2030,3,14)),
 
-  ]
+  ];
+  addNewQuote(quote: any){
+    let goalLength = this.quote.length;
+    quote.id = goalLength+1;
+    quote.dateSent = new Date(quote.dateSent)
+    this.quote.push(quote)
+  }
 
   constructor() { }
 

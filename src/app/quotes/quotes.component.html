@@ -10,15 +10,19 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-            <ul>
-                <div *ngFor="let quote of quote; let i = index">
-                    <li >
-                        <div class="quote col-sm-6">"{{quote.quote}}"</div>
-                        <!-- <div class="author col-sm-6" style="display: inline;">by {{quote.author}}</div>  -->
-                    </li>
-                </div>
-                
-            </ul>
+                <h1>this are my quotes</h1>
+                <ul>
+                    <div class="" >
+                        <div id="quote- box" *ngFor="let quote of quote; let i = index">
+                            <li >
+                                <div class="quote col-sm-6 ">"{{quote.quote}}"</div>
+                                <!-- <div class="author col-sm-6" style="display: inline;">by {{quote.author}}</div>  -->
+                            </li>
+                        </div>
+                    </div>
+                    
+                    
+                </ul>
             </div>
             
 

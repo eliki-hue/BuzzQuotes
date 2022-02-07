@@ -10,7 +10,8 @@ import { MaxLengthValidator } from '@angular/forms';
 export class QuotesComponent implements OnInit {
   
   quote : Quote[] =[
-    new Quote(1,'Every market has a mad man','Wahenga','Elijah',new Date(2,2,2012) )
+    new Quote(1,'Every market has a mad man','Wahenga','Elijah',new Date(2,2,2012) ),
+    new Quote(2, 'sharpen your axe','me','kiragu',new Date (3,4,2022)), 
   ]
 
   constructor() { }

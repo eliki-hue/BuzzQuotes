@@ -16,10 +16,12 @@
     -webkit-box-shadow: -9px -10px 5px 0px rgba(28,22,28,0.52);
     -moz-box-shadow: -9px -10px 5px 0px rgba(28,22,28,0.52);
     box-shadow: -9px -10px 5px 0px rgba(28,22,28,0.52);
+    
 
 }
 .quote-item{
-    width: 1000%;
+    width: 100%;
+    margin-left: 10px;
     
 }
 h1{

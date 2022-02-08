@@ -1,37 +1,39 @@
+
 <form (ngSubmit)="submitQuote()" #quoteForm='ngForm'>
     <div class="form-group">
 
         <label for="quote">Quote</label>
-        <input type="text" required class="form-control" id="quote" [(ngModel)]='newQuote.quote!' name="quote" #quote='ngModel' required>
-        <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+        <input type="text" required class="form-control" id="quote" [(ngModel)]='newQuote.quote' name="quote" required>
+        <!-- <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
             <p>The Quote is Required</p>
-        </div>
+        </div> -->
        
 
     </div>
     <div class="form-group">
 
         <label for="author">Author</label>
-        <input type="text" required class="form-control" id="author" [(ngModel)]='newQuote.author!' name="author" #author='ngModel' required>
+        <input type="text" required class="form-control" id="author" [(ngModel)]='newQuote.author' name="author" #author='ngModel' required>
+        
         <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
             <p>The name of the Author is Required</p>
         </div>
     </div>
     <div class="form-group">
 
-        <label for="sender">Sender</label>
-        <textarea class="form-control" id="sender" rows="4" [(ngModel)]="newQuote.sender!" name="author" #sender='ngModel' required></textarea>
+        <label for="sender">sender</label>
+        <input type="text" class="form-control" id="sender" [(ngModel)]='newQuote.sender' name="sender" #sender='ngModel' required>
         <div [hidden]="sender.valid || sender.pristine" class="alert alert-danger">
             <p>Please put your name</p>
         </div>
     </div>
     <div class="form-group">
         <label for="date">Date</label>
-        <input type='date' id="date" [(ngModel)]="newQuote.dateSent!" #date ='ngModel' required>
+        <input type='date' id="date" [(ngModel)]="newQuote.dateSent" #date ='ngModel' required>
         <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
             <p> Date is required</p>
         </div>
 
     </div>
-    <button type="submit" class="btn btn-success">Add Quote</button>
+    <button type="submit" action="submitQuote(quoteForm)" class="btn btn-success">Add Quote</button>
 </form>

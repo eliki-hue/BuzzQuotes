@@ -16,6 +16,14 @@
     
 
 }
+.quote-box{
+    display: flex;
+}
+.btn-vote {
+    display: flex;
+    margin-top: 20px;
+    
+}
 .quote-item{
     width: 100%;
     margin-left: 10px;

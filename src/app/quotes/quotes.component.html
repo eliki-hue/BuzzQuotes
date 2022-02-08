@@ -9,26 +9,77 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            
                 <h1>this are my quotes</h1>
                 <ul>
-                    <div class="" >
-                        <div id="quote- box" *ngFor="let quote of quote; let i = index">
-                            <li >
-                            <div class="quote col-sm-8">
-                                <div class="quote-item"> "{{quote.quote}}"</div>
+                    
+                    <div id="quote- box" *ngFor="let quote of quotes; let i = index">
+                        <div class="quote-box" >
+                            <div class="col-sm-8 ">
+                                <li >
+                                    <div class="quote ">
+                                        <div class="quote-item">{{quote.id}} "{{quote.quote}}"  by {{quote.author}} ----{{quote.dateSent}}</div>
+                                    </div>
+                                </li>
                             </div>
-                                <!-- <div class="author col-sm-6" style="display: inline;">by {{quote.author}}</div>  -->
-                            </li>
+                            <div class="col-sm-6 btn-vote">
+                                <div class="col-sm-6" style="margin-left: 100px;margin-right: 0px;"><button type="button" ng-click="upcount = upcount+1" class="btn btn-success">Upvote</button><p>{{upcount}}</p> </div>
+                                <div class="col-sm-6" style="margin-left: 0px;margin-right: 100px;"><button type="button" ng-click="upcount = upcount+1" class="btn btn-danger">Downvote</button><p>{{downcount}}</p> </div>
+                                 <button type="button" class="btn btn-danger">Downvote</button>
+                            </div>
                         </div>
-                    </div>
+                            
+                        </div>
+                    
+                
+                   
                     
                     
                 </ul>
                 <button class="btn btn-primary" >Add Quote</button>
-            </div>        
-            <app-form (addQuote)="addNewQuote($event)"></app-form>   
+            
+            
+<form (ngSubmit)="adding()" #quoteForm='ngForm'>
+    <div class="form-group">
+
+        <label for="quote">Quote</label>
+        <input type="text" required class="form-control" id="quote" [(ngModel)]='newQuote.quote' name="quote" required>
+        <!-- <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+            <p>The Quote is Required</p>
+        </div> -->
+       
+
+    </div>
+    <div class="form-group">
+
+        <label for="author">Author</label>
+        <input type="text" required class="form-control" id="author" [(ngModel)]='newQuote.author' name="author" #author='ngModel' required>
+        
+        <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+            <p>The name of the Author is Required</p>
         </div>
     </div>
+    <div class="form-group">
+
+        <label for="sender">sender</label>
+        <input type="text" class="form-control" id="sender" [(ngModel)]='newQuote.sender' name="sender" #sender='ngModel' required>
+        <div [hidden]="sender.valid || sender.pristine" class="alert alert-danger">
+            <p>Please put your name</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type='date' id="date" [(ngModel)]="newQuote.dateSent" #date ='ngModel' required>
+        <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
+            <p> Date is required</p>
+        </div>
+
+    </div>
+    <button type="submit"  class="btn btn-success">Add Quote</button>
+</form>
+      
+            <!-- <app-form (addQuote)="addNewQuote($event)"></app-form>    -->
+        </div>
+    </div><p>{{quotes.length}</p>
 </body>
 </html>

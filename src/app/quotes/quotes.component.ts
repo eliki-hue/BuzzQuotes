@@ -41,12 +41,12 @@ export class QuotesComponent implements OnInit {
     upvote =0
     downvote =0
     count =0
-  upvoteAdd(){
+  upvoteAdd(i: any){
     this.upvote ++
     return this.upvote
     
   };
-  downvoteSubtractor(){
+  downvoteSubtractor(i: any){
     this.downvote++
     return this.downvote
   }

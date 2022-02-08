@@ -23,9 +23,10 @@
                                 </li>
                             </div>
                             <div class="col-sm-6 btn-vote">
-                                <div class="col-sm-6" style="margin-left: 100px;margin-right: 0px;"><button type="button" ng-click="upcount = upcount+1" class="btn btn-success">Upvote</button><p>{{upcount}}</p> </div>
-                                <div class="col-sm-6" style="margin-left: 0px;margin-right: 100px;"><button type="button" ng-click="upcount = upcount+1" class="btn btn-danger">Downvote</button><p>{{downcount}}</p> </div>
+                                <div class="col-sm-6" style="margin-left: 100px;margin-right: 0px;"><button type="button" (click)="upvoteAdd()" class="btn btn-success">Upvote</button><p>{{upvote}}</p> </div>
+                                <div class="col-sm-6" style="margin-left: 0px;margin-right: 100px;"><button type="button" (click)="downvoteSubtractor()" class="btn btn-danger">Downvote</button><p>{{downvote}}</p> </div>
                                  <button type="button" class="btn btn-danger">Downvote</button>
+                                 <p>{{count}}</p>
                             </div>
                         </div>
                             

@@ -8,6 +8,9 @@ import { MaxLengthValidator } from '@angular/forms';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   
   quotes : Quote[] =[
     new Quote(1,'Every market has a mad man','Wahenga','Elijah',new Date(2,2,2012) ),
@@ -33,13 +36,26 @@ export class QuotesComponent implements OnInit {
     alert('pushed')
     
   }
-  upvote=0
-  downvote =0
+    upvote =0
+    downvote =0
+    count =0
+    upvoteAdd(){
+      this.upvote ++
+      return this.upvote
+      
+    };
+    downvoteSubtractor(){
+      this.downvote++
+      return this.downvote
+    }
+
+    };
+
   
 
-  constructor() { }
+  // constructor() { }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
-}
+

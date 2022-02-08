@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { FormComponent } from './form/form.component';
 import { NgForm } from '@angular/forms';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    FormComponent
+    FormComponent,
+    QuoteDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -50,6 +50,12 @@ export class QuotesComponent implements OnInit {
     }
 
     };
+    // deleteQuote( index: number){
+      
+    //     let toDelete= confirm(`Are you sure you want to delete ${this.Quote[index].name}`)
+    //     if (toDelete){
+    //       this.goals.splice(index,1)
+    //     }
 
   
 

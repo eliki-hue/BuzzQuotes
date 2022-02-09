@@ -26,6 +26,7 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].showDescription= !this.quotes[index].showDescription;
   }
 
+
   newQuote = new Quote(0, '','','', new Date())
   adding(){
     this.addNewQuote(this.newQuote)
@@ -35,19 +36,20 @@ export class QuotesComponent implements OnInit {
     newQuote.id =quoteLength+1;
     newQuote.dateSent = new Date(newQuote.dateSent)
     this.quotes.push(newQuote)
-    alert('pushed')
+    
     
   }
     upvote =0
     downvote =0
-    count =0
-  upvoteAdd(i: any){
-    this.upvote ++
-    return this.upvote
+    // count =0
+  upvoteAdd(index: any){
+    this.quotes[index].upvote = this.quotes[index].upvote +1
+    this.quotes[index].upvote
+    return this.quotes[index].upvote
     
   };
-  downvoteSubtractor(i: any){
-    this.downvote++
+  downvoteSubtractor(index: any){
+    this.count++
     return this.downvote
   }
   deleteQuote(isdelete:any, index:number){
@@ -60,7 +62,10 @@ export class QuotesComponent implements OnInit {
 
   }
   
-    
+  count: number = 0;
+  clickCount(): void{
+       this.count++
+       }
 
   constructor() { }
 

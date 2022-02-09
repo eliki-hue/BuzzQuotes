@@ -27,19 +27,29 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].showDescription= !this.quotes[index].showDescription;
   }
 
-
+formdetail:any = []
   newQuote = new Quote(0, '','','', new Date(),0,0)
-  adding(){
-    this.addNewQuote(this.newQuote)
+  adding(data: any){
+    const quote =data.quote
+    const author= data.author
+    const sender =data.sender
+    alert('from form we have ' + quote +" "+author+' '+sender)
+    this.addNewQuote(this.newQuote, quote, author, sender)
   }
-  addNewQuote(newQuote: Quote){
+  addNewQuote(newQuote: Quote, quote: any, author: any,sender: any ){
+    alert("received " + quote+ " "+author+ ' '+sender)
     let quoteLength = this.quotes.length;
+    newQuote.quote= quote;
+    newQuote.author= author;
+    newQuote.sender = sender
     newQuote.id =quoteLength+1;
     newQuote.dateSent = new Date(newQuote.dateSent)
     this.quotes.push(newQuote)
     
     
+    
   }
+  
   upvote(i: any){
     this.quotes[i].likes +=1
   }

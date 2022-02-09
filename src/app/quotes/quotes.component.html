@@ -18,11 +18,10 @@
                             <div class="col-sm-8 ">
                                 <li >
                                     <div class="quote ">
-                                        <div class="quote-item"> "{{quote.quote}}"  </div>
+                                        <div class="quote-item">{{quote.id}} "{{quote.quote}}"  by {{quote.author}} ----{{quote.dateSent}}</div>
                                     </div>
-                                  
                                    
-                                
+                                    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isdelete)="deleteQuote($event,i)"></app-quote-details>
                                 </li>
                             </div>
                             <div class="col-sm-6 btn-vote">
@@ -43,11 +42,11 @@
                 <button class="btn btn-primary" >Add Quote</button>
             
             
-<form (ngSubmit)="adding() ;quoteForm.resetForm({})" #quoteForm='ngForm'> 
+<form (ngSubmit)="adding(quoteForm.value)" #quoteForm='ngForm'>
     <div class="form-group">
 
         <label for="quote">Quote</label>
-        <input type="text" required class="form-control" id="quote" [(ngModel)]='newQuote.quote' name="quote" required>
+        <input type="text" required class="form-control" id="quote" (ngModel)='newQuote.quote' name="quote" required>
         <!-- <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
             <p>The Quote is Required</p>
         </div> -->
@@ -57,7 +56,7 @@
     <div class="form-group">
 
         <label for="author">Author</label>
-        <input type="text" required class="form-control" id="author" [(ngModel)]='newQuote.author' name="author" #author='ngModel' required>
+        <input type="text" required class="form-control" id="author" (ngModel)='newQuote.author' name="author" #author='ngModel' required>
         
         <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
             <p>The name of the Author is Required</p>
@@ -66,7 +65,7 @@
     <div class="form-group">
 
         <label for="sender">sender</label>
-        <input type="text" class="form-control" id="sender" [(ngModel)]='newQuote.sender' name="sender" #sender='ngModel' required>
+        <input type="text" class="form-control" id="sender" (ngModel)='newQuote.sender' name="sender" #sender='ngModel' required>
         <div [hidden]="sender.valid || sender.pristine" class="alert alert-danger">
             <p>Please put your name</p>
         </div>
@@ -79,7 +78,8 @@
         </div>
 
     </div> -->
-    <button type="submit"  class="btn btn-success">Add Quote</button>
+    <button type="submit" id="addButton" class="btn btn-success">Add Quote</button>
+    <button type="reset">reset </button>
 </form>
       
             <!-- <app-form (addQuote)="addNewQuote($event)"></app-form>    -->

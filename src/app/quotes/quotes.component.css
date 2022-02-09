@@ -26,7 +26,10 @@
 }
 .btn {
     margin: 10px;
-    height: 70%;
+    height: fit-content;
+}
+#addButton{
+    height: fit-content;
 }
 .quote-item{
     width: 100%;

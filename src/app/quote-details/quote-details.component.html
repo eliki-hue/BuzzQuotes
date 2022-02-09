@@ -1,5 +1,13 @@
-<p>Quote Author : {{quote.author}}{{quote.dateSent|date}}</p>
-<p>Quote was sent by :  {{quote.sender}}</p>
-<p>The quote was sent on : {{quote.dateSent|date}}</p>
-<p>Time passed since the quote was sent is : {{quote.dateSent|dateCount}} days</p>
-<button class="btn btn-danger" (click)="deleteQuote(true)">Delete Goal</button>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p><strong>Quote Author :</strong> {{quote.author}}</p>
+            <p><strong>Quote was sent by :</strong>  {{quote.sender}}</p>
+            <p><strong>The quote was sent on :</strong> {{quote.dateSent|date}}</p>
+            <p><strong>Time passed since the quote was sent is :</strong> {{quote.dateSent|dateCount}} days</p>
+            <button class="btn btn-danger" (click)="deleteQuote(true)">Delete Quote</button>
+
+        </div>
+    </div>
+</div>
+

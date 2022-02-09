@@ -1,2 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~bootstrap/dist/css/bootstrap-grid.css";
+
+.row {
+    margin: 15px;
+}
+text{
+    font-family: 'Courier New', Courier, monospace;
+}

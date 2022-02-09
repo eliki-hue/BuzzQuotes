@@ -1,6 +1,7 @@
 import { Quote } from './../quote';
 import { Component, OnInit } from '@angular/core';
 import { MaxLengthValidator } from '@angular/forms';
+import { SweetAlert2Module } from 
 
 @Component({
   selector: 'app-quotes',
@@ -39,18 +40,11 @@ export class QuotesComponent implements OnInit {
     
     
   }
-    upvote =0
-    downvote =0
-    // count =0
-  upvoteAdd(index: any){
-    this.quotes[index].upvote = this.quotes[index].upvote +1
-    this.quotes[index].upvote
-    return this.quotes[index].upvote
-    
-  };
-  downvoteSubtractor(index: any){
-    this.count++
-    return this.downvote
+  upvote(i: any){
+    this.quotes.upvote+=1;
+  }
+  downvote(i: any){
+    this.quoty.dislikes+=1;
   }
   deleteQuote(isdelete:any, index:number){
     if(isdelete){
@@ -62,10 +56,7 @@ export class QuotesComponent implements OnInit {
 
   }
   
-  count: number = 0;
-  clickCount(): void{
-       this.count++
-       }
+ 
 
   constructor() { }
 

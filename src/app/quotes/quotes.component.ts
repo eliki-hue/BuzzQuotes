@@ -1,7 +1,7 @@
 import { Quote } from './../quote';
 import { Component, OnInit } from '@angular/core';
 import { MaxLengthValidator } from '@angular/forms';
-import { SweetAlert2Module } from 
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @Component({
   selector: 'app-quotes',

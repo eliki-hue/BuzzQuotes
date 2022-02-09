@@ -26,9 +26,8 @@
                                 </li>
                             </div>
                             <div class="col-sm-6 btn-vote">
-                                <button class="btn btn-sm btn-success" (click)='upvote(i)'>{{quote.upvote}} <i class="fa fa-thumbs-up" id="like"></i></button> 
-<button class="btn btn-sm hate" id="hate" (click)='downvote(i)'>{{quote.downvote}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
-                                 
+                                <button class="btn btn-sm btn-success" (click)='upvote()'>{{quoty.likes}} <i class="fa fa-thumbs-up" id="like"></i></button> 
+                                <button class="btn btn-sm hate" id="hate" (click)='downvote()'>{{quoty.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
                                    
                                 </div>
                         </div>
@@ -43,7 +42,7 @@
                 <button class="btn btn-primary" >Add Quote</button>
             
             
-<form (ngSubmit)="adding()" #quoteForm='ngForm'>
+<form (ngSubmit)="adding() ;quoteForm.resetForm({})" #quoteForm='ngForm'> 
     <div class="form-group">
 
         <label for="quote">Quote</label>

@@ -2,17 +2,16 @@ import { identifierName } from "@angular/compiler";
 
 export class Quote {
     showDescription:boolean;
-    upvote :number;
-    downvote: number;
-    constructor (public id:number, public quote:string, public author:string, public sender:string, public dateSent:Date){
+   
+    constructor (public id:number, public quote:string, public author:string, public sender:string, public dateSent:Date , public likes:number, public dislikes:number){
         this.id=id;
         this.quote = quote;
         this.author = author;
         this.sender = sender;
         this.dateSent= dateSent
         this.showDescription =false
-        this.upvote = 0
-        this.downvote =0
+        this.likes = likes
+        this.dislikes =dislikes
 
     }
 }

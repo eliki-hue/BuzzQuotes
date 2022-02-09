@@ -10,6 +10,7 @@ import { FormComponent } from './form/form.component';
 import { NgForm } from '@angular/forms';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { DateCountPipe } from './date-count.pipe';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { DateCountPipe } from './date-count.pipe';
     AppRoutingModule,
     FormsModule,
     CommonModule,
-    
+    SweetAlert2Module.forRoot()
 
     
   ],

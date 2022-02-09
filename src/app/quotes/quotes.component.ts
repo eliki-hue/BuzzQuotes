@@ -33,11 +33,10 @@ formdetail:any = []
     const quote =data.quote
     const author= data.author
     const sender =data.sender
-    alert('from form we have ' + quote +" "+author+' '+sender)
     this.addNewQuote(this.newQuote, quote, author, sender)
   }
   addNewQuote(newQuote: Quote, quote: any, author: any,sender: any ){
-    alert("received " + quote+ " "+author+ ' '+sender)
+  
     let quoteLength = this.quotes.length;
     newQuote.quote= quote;
     newQuote.author= author;
@@ -45,9 +44,7 @@ formdetail:any = []
     newQuote.id =quoteLength+1;
     newQuote.dateSent = new Date(newQuote.dateSent)
     this.quotes.push(newQuote)
-    
-    
-    
+        
   }
   
   upvote(i: any){

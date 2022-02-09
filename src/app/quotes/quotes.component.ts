@@ -12,15 +12,15 @@ export class QuotesComponent implements OnInit {
   
   
   quotes : Quote[] =[
-    new Quote(1,'Every market has a mad man','Wahenga','Elijah',new Date(2,2,2012),0,0 ),
-    new Quote(2, 'sharpen your axe','me','kiragu',new Date (3,4,2022),0,0), 
-    new Quote (3,'hahahahahah','eliki','eliki', new Date (2,3,2016),0,0),
-    new Quote(4, 'Watch finding Nemo', 'Find an online version and watch merlin find his son', 'kiki',new Date(2020,3,14),0,0),
-    new Quote(5,'Buy Cookies','I have to buy cookies for the parrot','NNJ',new Date(2019,6,9),0,0),
-    new Quote(6,'Get new Phone Case','Diana has her birthday coming up soon','HHG',new Date(2022,1,12),0,0),
-    new Quote(7,'Get Dog Food','Pupper likes expensive snacks','DGFGF',new Date(2019,0,18),0,0),
-    new Quote(8,'Solve math homework fggyyyyyyyyyy yyyyyyyyyyyyyyyyyyyy ccchhchch chchchcccccc cccccccccccccc cccccccccccdcdfge dddddddddfssssdddd ddddddddddd dddddddddddddd dddddddddd ddddddd dddddddddddddd','Damn Math','FHG',new Date(2019,2,14),0,0),
-    new Quote(9,'Plot my world domination plan','Cause I am an evil overlord','GFGHJK',new Date(2030,3,14),0,0),
+    new Quote(1," You're off to great places, today is your day. Your mountain is waiting, so get on your way",'Dr. Seuss','Elijah',new Date(2,2,2012),0,0 ),
+    new Quote(2, 'You always see failure on your way to success','Mickey Rooney','kiragu',new Date (3,4,2022),0,0), 
+    new Quote (3,'No one is perfect - thats why pencils have erasers','Wolfgang Riebe','eliki', new Date (2,3,2016),0,0),
+    new Quote(4, 'Winning does not always mean first. Winning means you are doing better than you have been', 'Bonnie Blair', 'kiki',new Date(2020,3,14),0,0),
+    new Quote(5,'You are braver than you believe, and stronger than you seem, and smarter than you think','A.A Mine','NNJ',new Date(2019,6,9),0,0),
+    new Quote(6,'It always seem impossible until it is done','Nelson Mandela','HHG',new Date(2022,1,12),0,0),
+    new Quote(7,'Keep your face to the sunshine and you cannot see a shadow','Helen Keller','DGFGF',new Date(2019,0,18),0,0),
+    new Quote(8,'Once you replace negative thoughts with positive ones, you will start having positive results.','Willie Nelson','FHG',new Date(2019,2,14),0,0),
+    new Quote(9,'Positive thinking will let you do everything better than negative thinking','Zig Ziglar','GFGHJK',new Date(2030,3,14),0,0)
 
   ];
   toggleDetails(index: number){

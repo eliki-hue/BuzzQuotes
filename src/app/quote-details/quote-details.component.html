@@ -1,4 +1,5 @@
-<p>{{quote.author}} {{quote.sender}}{{quote.dateSent}}</p>
-<p>This quote was sent {{quote.dateSent}} days</p>
-<button (click)="deleteQuote(true)">Delete Goal</button>
-//datecount pipe
+<p>Quote Author : {{quote.author}}{{quote.dateSent|date}}</p>
+<p>Quote was sent by :  {{quote.sender}}</p>
+<p>The quote was sent on : {{quote.dateSent|date}}</p>
+<p>Time passed since the quote was sent is : {{quote.dateSent|dateCount}} days</p>
+<button class="btn btn-danger" (click)="deleteQuote(true)">Delete Goal</button>

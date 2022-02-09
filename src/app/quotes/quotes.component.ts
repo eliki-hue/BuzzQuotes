@@ -56,7 +56,7 @@ formdetail:any = []
 
   deleteQuote(isdelete:any, index:number){
     if(isdelete){
-      let toDelete = confirm(`are you sure you want to delete ${this.quotes[index]}`)
+      let toDelete = confirm(`are you sure you want to delete "${this.quotes[index].quote}" quote?`)
       if (toDelete){
         this.quotes.splice(index,1)
       }

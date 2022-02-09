@@ -18,23 +18,22 @@
                             <div class="col-sm-8 ">
                                 <li >
                                     <div class="quote ">
-                                        <div class="quote-item"> "{{quote.quote}}" {{quote.likes}} </div>
+                                        <div class="quote-item"> "{{quote.quote}}"  </div>
                                     </div>
-                                    <button class="btn btn-info" (click)="toggleDetails(i)">Info</button>
-                                    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isdelete)="deleteQuote($event,i)"></app-quote-details>
-                                    <button class="btn btn-sm btn-success" (click)='upvote(i)'>{{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button> 
-                                <button class="btn btn-sm hate" id="hate" (click)='downvote(i)'>{{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
+                                  
                                    
+                                
                                 </li>
                             </div>
                             <div class="col-sm-6 btn-vote">
-                                <!-- <button class="btn btn-sm btn-success" (click)='upvote(i)'>{{quote.likes}} <i class="fa fa-thumbs-up" id="like"></i></button> 
-                                <button class="btn btn-sm hate" id="hate" (click)='downvote(i)'>{{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
-                                    -->
+                                <button class="btn btn-info" (click)="toggleDetails(i)">Info</button>
+                                <button class="btn btn-success" (click)='upvote(i)'>upvote <br> {{quote.likes}} </button> 
+                                <button class="btn btn-danger" id="hate" (click)='downvote(i)'>downvote <br> {{quote.dislikes}} </button> 
+                                   
                                 </div>
                         </div>
                             
-                        </div>rima
+                        </div>
                     
                 
                    
@@ -85,6 +84,6 @@
       
             <!-- <app-form (addQuote)="addNewQuote($event)"></app-form>    -->
         </div>
-    </div><p>{{quotes.length}</p>
+    </div>
 </body>
 </html>

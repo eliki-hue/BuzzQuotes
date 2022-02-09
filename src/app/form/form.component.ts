@@ -8,7 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  newQuote = new Quote(0, '','','', new Date());
+  newQuote = new Quote(0, '','','', new Date(),0,0);
   @Output() addQuote = new EventEmitter<Quote>();
 
     submitQuote(){
